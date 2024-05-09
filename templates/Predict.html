@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Heart Disease Prediction System</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../static/style.css"/>
+<script language="javascript">
+	function checkFields(f1)
+	{
+	if(f1.t1.value.length==0)
+	{
+	alert("Please Enter Age");
+	f1.t1.focus();
+	return false;
+	}
+
+	if(f1.t4.value.length==0)
+	{
+	alert("Please Enter TrestBPS");
+	f1.t4.focus();
+	return false;
+	}
+	if(f1.t5.value.length==0)
+	{
+	alert("Please Enter Cholestrol");
+	f1.t5.focus();
+	return false;
+	}
+	if(f1.t8.value.length==0)
+	{
+	alert("Please Enter Thalach");
+	f1.t8.focus();
+	return false;
+	}
+	if(f1.t10.value.length==0)
+	{
+	alert("Please Enter Oldpeak");
+	f1.t10.focus();
+	return false;
+	}
+	return true;
+	}
+	</script>
+</head>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h3><font size="5" color="white">Heart Disease Prediction System</font></h3>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul>
+<li class="active"><a href="TrainML">Train Machine Learning Algorithm on Heart Dataset</a></li>
+<li><a href="Predict">Predict Heart Disease</a></li>
+<li><a href="index">Logout</a></li>
+			
+		</ul>
+		<br class="clearfix" />
+				</div>
+			
+	
+			<center>
+			<form name="f1" action="/PredictAction" method="post" OnSubmit="return checkFields(this);">
+<br/>
+   <h2><b>Heart Disease Prediction Screen</b></h2>
+   
+	<font size="" color="red"><center>{{ error }}</center></font>
+						
+						<table align="center" width="40" >
+			 <tr><td><font size="" color="black">Age</b></td><td><input type="text" name="t1" style="font-family: Comic Sans MS" size="15"/></td></tr>
+
+			 <tr><td><font size="" color="black">Gender</b></td>
+			 <td><select name="t2">
+			 <option value="Male">Male</option>
+			 <option value="Female">Female</option>
+			 </select>
+			 </td></tr>
+
+			 <tr><td><font size="" color="black">CP</b></td>
+			 <td><select name="t3">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 <option value="2">2</option>
+			 <option value="3">3</option>
+			 </select>
+			 </td></tr>
+
+			 <tr><td><font size="" color="black">Trestbps</b></td><td><input type="text" name="t4" style="font-family: Comic Sans MS" size="15"/></td></tr>
+
+			 <tr><td><font size="" color="black">Cholestrol</b></td><td><input type="text" name="t5" style="font-family: Comic Sans MS" size="15"/></td></tr>
+
+			 <tr><td><font size="" color="black">FBS</b></td>
+			 <td><select name="t6">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 </select>
+			 </td></tr>
+
+			 <tr><td><font size="" color="black">RestECG</b></td>
+			 <td><select name="t7">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 <option value="2">2</option>
+			 </select>
+			 </td></tr>
+
+			 <tr><td><font size="" color="black">Thalach</b></td><td><input type="text" name="t8" style="font-family: Comic Sans MS" size="15"/></td></tr>
+
+			<tr><td><font size="" color="black">Exang</b></td>
+			 <td><select name="t9">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 </select>
+			 </td></tr>
+
+			<tr><td><font size="" color="black">Oldpeak</b></td><td><input type="text" name="t10" style="font-family: Comic Sans MS" size="15"/></td></tr>
+
+			<tr><td><font size="" color="black">Slope</b></td>
+			 <td><select name="t11">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 <option value="2">2</option>
+			 </select>
+			 </td></tr>
+			
+			<tr><td><font size="" color="black">CA</b></td>
+			 <td><select name="t12">
+			 <option value="0">0</option>
+			 <option value="1">1</option>
+			 <option value="2">2</option>
+			 <option value="2">3</option>
+			 </select>
+			 </td></tr>
+
+			 <tr><td><font size="" color="black">Thal</b></td>
+			 <td><select name="t13">
+			 <option value="1">1</option>
+			 <option value="2">2</option>
+			 <option value="2">3</option>
+			 </select>
+			 </td></tr>
+			
+			<tr><td></td><td><input type="submit" value="Submit">
+			</td>
+
+			</table>
+				</div>	
+					
+				</div>
+				
+	</body>
+</html>
